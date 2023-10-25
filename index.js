@@ -10,7 +10,7 @@ search.addEventListener('click', () => {
     const city = document.querySelector('.search-box input').value;
     if (city === '') return;
 
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`).then(response => response.json()).then
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`).then(response => response.json()).then
         (json => {
             if (json.cod === '404') {
                 container.style.height = '400px';
